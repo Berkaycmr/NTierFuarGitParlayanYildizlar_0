@@ -11,9 +11,11 @@ namespace Project.ENTITIES.Models
         public int Capacity { get; set; }
         public string Sector { get; set; }
         public int FairID { get; set; }
+        public int LocationID { get; set; }
 
         //Relational Properties
         public Fair Fair { get; set; }
+        public Location Location { get; set; }
 
     }
 }
