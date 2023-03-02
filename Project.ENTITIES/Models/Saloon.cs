@@ -14,8 +14,8 @@ namespace Project.ENTITIES.Models
         public int LocationID { get; set; }
 
         //Relational Properties
-        public Fair Fair { get; set; }
-        public Location Location { get; set; }
+        public virtual Fair Fair { get; set; }
+        public virtual Location Location { get; set; }
 
     }
 }

@@ -13,7 +13,7 @@ namespace Project.ENTITIES.Models
 
         //Relational Properties
 
-        public AppUserProfile Profile { get; set; }
-        public List<Customer> Customers { get; set; }
+        public virtual AppUserProfile Profile { get; set; }
+        public virtual List<Customer> Customers { get; set; }
     }
 }
