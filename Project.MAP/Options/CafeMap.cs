@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace Project.MAP.Options
 {
-    public class FairMap:BaseMap<Fair>
+    public class CafeMap:BaseMap<Cafe>
     {
-        public FairMap()
+        public CafeMap()
         {
-            Property(x => x.StartingDate).HasColumnName("Başlangıc Zamanı");
-            Property(x => x.EndingDate).HasColumnName("Bitiş Zamanı");
+            Property(x => x.UnitPrice).HasColumnType("Money");
         }
     }
 }

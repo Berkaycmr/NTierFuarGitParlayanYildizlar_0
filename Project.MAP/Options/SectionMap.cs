@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace Project.MAP.Options
 {
-    public class FairMap:BaseMap<Fair>
+    public class SectionMap:BaseMap<Section>
     {
-        public FairMap()
+        public SectionMap()
         {
-            Property(x => x.StartingDate).HasColumnName("Başlangıc Zamanı");
-            Property(x => x.EndingDate).HasColumnName("Bitiş Zamanı");
+            Property(x => x.SectionType).HasColumnName("Bölüm Türü");
         }
     }
 }

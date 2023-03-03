@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace Project.MAP.Options
 {
-    public class FairMap:BaseMap<Fair>
+    public class ToiletMap:BaseMap<Toilet>
     {
-        public FairMap()
+        public ToiletMap()
         {
-            Property(x => x.StartingDate).HasColumnName("Başlangıc Zamanı");
-            Property(x => x.EndingDate).HasColumnName("Bitiş Zamanı");
+            Property(x => x.ToiletType).HasColumnName("Tuvalet Tipi");
         }
     }
 }

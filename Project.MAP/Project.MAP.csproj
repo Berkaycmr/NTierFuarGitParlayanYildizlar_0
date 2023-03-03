@@ -54,10 +54,21 @@
     <Compile Include="Options\AppUserMap.cs" />
     <Compile Include="Options\AppUserProfileMap.cs" />
     <Compile Include="Options\BaseMap.cs" />
+    <Compile Include="Options\CafeMap.cs" />
+    <Compile Include="Options\CafeRequestMap.cs" />
     <Compile Include="Options\CustomerMap.cs" />
     <Compile Include="Options\FairMap.cs" />
     <Compile Include="Options\LocationMap.cs" />
+    <Compile Include="Options\MeetingRoomMap.cs" />
+    <Compile Include="Options\MeetingRoomRequestMap.cs" />
+    <Compile Include="Options\RequestMap.cs" />
+    <Compile Include="Options\SaloonCustomerMap.cs" />
     <Compile Include="Options\SaloonMap.cs" />
+    <Compile Include="Options\SaloonSponsorMap.cs" />
+    <Compile Include="Options\SectionMap.cs" />
+    <Compile Include="Options\SponsorMap.cs" />
+    <Compile Include="Options\ToiletMap.cs" />
+    <Compile Include="Options\ToiletRequestMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
