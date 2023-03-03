@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.ENTITIES.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace Project.MAP.Options
     {
         public AppUserProfileMap()
         {
-            Totable("Profiller");
+            ToTable("Profiller");
             Property(x => x.FirstName).HasColumnName("Isim");
             Property(x => x.LastName).HasColumnName("Soyisim");
             

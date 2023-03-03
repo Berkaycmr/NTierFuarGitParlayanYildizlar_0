@@ -54,6 +54,10 @@
     <Compile Include="Options\AppUserMap.cs" />
     <Compile Include="Options\AppUserProfileMap.cs" />
     <Compile Include="Options\BaseMap.cs" />
+    <Compile Include="Options\CustomerMap.cs" />
+    <Compile Include="Options\FairMap.cs" />
+    <Compile Include="Options\LocationMap.cs" />
+    <Compile Include="Options\SaloonMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

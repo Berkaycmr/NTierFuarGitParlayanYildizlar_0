@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.ENTITIES.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace Project.MAP.Options
             Property(x => x.Password).HasColumnName("Sifre");
 
             //Birebir iliski tanımlaması
-            HasOptional(x => x.Profile).WithRequreid(x => x.AppUser);
+            HasOptional(x => x.Profile).WithRequired(x => x.AppUser);
         }
     }
 }
