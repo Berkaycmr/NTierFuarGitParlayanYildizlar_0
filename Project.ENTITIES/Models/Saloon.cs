@@ -16,6 +16,9 @@ namespace Project.ENTITIES.Models
         //Relational Properties
         public virtual Fair Fair { get; set; }
         public virtual Location Location { get; set; }
+        public virtual List<SaloonSponsor> SaloonSponsors { get; set; }
+        public virtual List<Section> Sections { get; set; }
+        public virtual List<SaloonCustomer> SaloonCustomers { get; set; }
 
     }
 }

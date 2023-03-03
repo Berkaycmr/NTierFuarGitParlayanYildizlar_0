@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
-    public class Fair:BaseEntity
+    public class Sponsor:BaseEntity
     {
-        public DateTime StartingDate { get; set; }
-        public DateTime EndingDate { get; set; }
+        public string CompanyName { get; set; }
         public string Sector { get; set; }
 
-
         //Relational Properties
-        public virtual List<Saloon> Saloons { get; set; }
+        public virtual List<SaloonSponsor> SaloonSponsors { get; set; }
 
     }
 }
