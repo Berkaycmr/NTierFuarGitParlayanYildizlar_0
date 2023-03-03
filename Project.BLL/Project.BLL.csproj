@@ -51,11 +51,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DesignPatterns\SingletonPattern\DBTool.cs" />
+    <Compile Include="GenericRepository\BaseEFRep\BaseRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\AppUserProfileRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\AppUserRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\CafeRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\CafeRequestRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\CustomerRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\FairRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\LocationRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\MeetingRoomRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\MeetingRoomRequestRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\RequestRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\SaloonCustomerRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\SaloonRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\SaloonSponsorRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\SectionRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\SponsorRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\ToiletRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\ToiletRequestRep.cs" />
+    <Compile Include="GenericRepository\IntRep\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project.DAL\Project.DAL.csproj">
+      <Project>{2ba7b78a-41c4-43b2-af5c-66870d9c7b12}</Project>
+      <Name>Project.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.ENTITIES\Project.ENTITIES.csproj">
+      <Project>{16b897ff-15de-4a79-96e3-d10ebd81f696}</Project>
+      <Name>Project.ENTITIES</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
