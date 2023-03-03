@@ -52,14 +52,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContextClasses\MyContext.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Project.ENTITIES\Project.ENTITIES.csproj">
+      <Project>{16b897ff-15de-4a79-96e3-d10ebd81f696}</Project>
+      <Name>Project.ENTITIES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.MAP\Project.MAP.csproj">
+      <Project>{84b0ccf7-1f5f-49dc-a51a-72e3b9880502}</Project>
+      <Name>Project.MAP</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
