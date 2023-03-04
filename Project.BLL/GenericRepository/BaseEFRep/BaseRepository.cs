@@ -4,6 +4,7 @@ using Project.DAL.ContextClasses;
 using Project.ENTITIES.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
@@ -12,6 +13,12 @@ using System.Threading.Tasks;
 
 namespace Project.BLL.GenericRepository.BaseEFRep
 {
+    //İş mantığı katmanımız.
+    // BLL katmanına açmış olduğumuz GenericRepository klasörüne IntRepository adında bir klasör daha açıp içine IRepository isminde bi ınterface classı açıyoruz.
+    //Bu ınterface generic olacak çünkü; içerisindeki metotları her class için çalışmasını istediğimizden o classlara göre görev yapacak.
+    //ve verilen T tipini sadece BaseEntitiy ile çalışmasını istiyoruz.(BLL entitıes katmanınıda referans alacak.)
+    
+
     public abstract class BaseRepository<T> : IRepository<T> where T : BaseEntity
     {
         MyContext _db;

@@ -10,14 +10,18 @@ namespace Project.BLL.GenericRepository.IntRep
 {
     public interface IRepository<T> where T : BaseEntity
     {
-        //list commands
+        //list commands : List emirleri yani loglama emirleri.
+        //Bu metotlar geriye değer döndüren metotlar.
+        //Metotlar çağırdığımız zaman bize hep bi T listesi döndürecek.
 
         List<T> GetAll();
         List<T> GetPassives();
         List<T> GetActives();
         List<T> GetModifieds();
 
-        // Modification Commands
+        // Modification Commands : Yani veritabanında bir değişikliğe neden olacak yapılar.
+        // Geriye değer döndürmelerine gerek yok sadece değişiklik yapacaklar ve bitecek.
+
 
         void Add(T item);
         void AddRange(List<T> list);
@@ -28,7 +32,7 @@ namespace Project.BLL.GenericRepository.IntRep
         void Destroy(T item);
         void DestroyRange(List<T> list);
 
-        //Linq Expressions
+        //Linq Expressions : Sql mantığı ile sorgu yaratmak.
         List<T> Where(Expression<Func<T, bool>> exp);
         
         bool Any(Expression<Func<T, bool>> exp);

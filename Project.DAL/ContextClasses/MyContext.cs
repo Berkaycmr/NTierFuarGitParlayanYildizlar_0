@@ -29,9 +29,9 @@ namespace Project.DAL.ContextClasses
             modelBuilder.Configurations.Add(new AppUserMap());
             modelBuilder.Configurations.Add(new AppUserProfileMap());
             modelBuilder.Configurations.Add(new CustomerMap());
-            //modelBuilder.Configurations.Add(new CustomerRequestMap());
-            //modelBuilder.Configurations.Add(new IssueMap());
-            //modelBuilder.Configurations.Add(new RequestIssueMap());
+            modelBuilder.Configurations.Add(new CustomerRequestMap());
+            modelBuilder.Configurations.Add(new IssueMap());
+            modelBuilder.Configurations.Add(new RequestIssueMap());
             modelBuilder.Configurations.Add(new RequestMap());
             modelBuilder.Configurations.Add(new SaloonMap());
             modelBuilder.Configurations.Add(new SaloonSponsorMap());

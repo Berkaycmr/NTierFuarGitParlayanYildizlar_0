@@ -55,21 +55,14 @@
     <Compile Include="GenericRepository\BaseEFRep\BaseRepository.cs" />
     <Compile Include="GenericRepository\ConcRep\AppUserProfileRepository.cs" />
     <Compile Include="GenericRepository\ConcRep\AppUserRepository.cs" />
-    <Compile Include="GenericRepository\ConcRep\CafeRep.cs" />
-    <Compile Include="GenericRepository\ConcRep\CafeRequestRep.cs" />
     <Compile Include="GenericRepository\ConcRep\CustomerRep.cs" />
-    <Compile Include="GenericRepository\ConcRep\FairRep.cs" />
-    <Compile Include="GenericRepository\ConcRep\LocationRep.cs" />
-    <Compile Include="GenericRepository\ConcRep\MeetingRoomRep.cs" />
-    <Compile Include="GenericRepository\ConcRep\MeetingRoomRequestRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\CustomerRequestRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\IssueRep.cs" />
+    <Compile Include="GenericRepository\ConcRep\RequestIssueRep.cs" />
     <Compile Include="GenericRepository\ConcRep\RequestRep.cs" />
-    <Compile Include="GenericRepository\ConcRep\SaloonCustomerRep.cs" />
     <Compile Include="GenericRepository\ConcRep\SaloonRep.cs" />
     <Compile Include="GenericRepository\ConcRep\SaloonSponsorRep.cs" />
-    <Compile Include="GenericRepository\ConcRep\SectionRep.cs" />
     <Compile Include="GenericRepository\ConcRep\SponsorRep.cs" />
-    <Compile Include="GenericRepository\ConcRep\ToiletRep.cs" />
-    <Compile Include="GenericRepository\ConcRep\ToiletRequestRep.cs" />
     <Compile Include="GenericRepository\IntRep\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

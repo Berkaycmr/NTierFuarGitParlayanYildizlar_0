@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Project.MAP.Options
 {
+   //MAPKatmanı: Classlar tabloya dönüşecekken bizim onlar üzerinde istediğimiz ilişkisel ayarlamaları yapıyor.
     public abstract class BaseMap<T> : EntityTypeConfiguration<T> where T : BaseEntity
     {
         public BaseMap()
