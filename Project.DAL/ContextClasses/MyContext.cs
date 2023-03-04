@@ -9,15 +9,23 @@ using Project.MAP.Options;
 
 namespace Project.DAL.ContextClasses
 {
+    //DAL katmanımız görevi veritabanı ile iletişimi sağlamaktır. EntityFramework indirmek zorunludur. (Referanslara baktığınızda hata alıyorsanız Build etmenizi tavsiye ediyoruz.)
+    
+    //ÖNEMLİ: Bu katmanda, UI katmanından referans aldığınız takdirde büyük bir güvenlik risk'i ile karşı karşıya kalabilirsiniz!  
+    
     public class MyContext : DbContext
-    {
+    {//MyContext'e DbContext'den miras vererek, ona bir veritabanı sınıfı olduğunu bildirmiş oluyoruz.
+
         public MyContext() : base("MyConnection")
-        {
-            
+        {//*BAŞLANGIÇ* projesinin AppConfig eylemleri içerisinden veritabanı özelliklerimizi alıp gerçekleştirecek olan Constructor'dır.
+
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
+        {//Map katmanından veritabanı ayarlamalarımızı alıyoruz. (Aşağıdaki işlemleri yapabilmeniz için Map ve Entities katmanlarının referansı Dal katmanında da olmalıdır.)
+
+         //Bu işlemleri gerçekleştirebilmek için Map ve Entities katmanlarının işlemlerinin bitmiş olması gerekmektedir.
+
             modelBuilder.Configurations.Add(new AppUserMap());
             modelBuilder.Configurations.Add(new AppUserProfileMap());
             modelBuilder.Configurations.Add(new CafeMap());
@@ -37,6 +45,7 @@ namespace Project.DAL.ContextClasses
             modelBuilder.Configurations.Add(new ToiletRequestMap());
         }
 
+        //Tablo olabilmeleri için DbSetlerimizi tanımlıyoruz.
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<AppUserProfile> AppUserProfiles { get; set; }
         public DbSet<Cafe> Cafes { get; set; }
@@ -56,4 +65,6 @@ namespace Project.DAL.ContextClasses
         public DbSet<ToiletRequest> ToiletRequests { get; set; }
 
     }
+
+    //Sıradaki işlem migration işlemi olacaktır ve DAL katmanı ile olan işlemlerimiz sonlanacaktır.
 }
