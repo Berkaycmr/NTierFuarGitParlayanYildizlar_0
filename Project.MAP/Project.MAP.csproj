@@ -55,6 +55,9 @@
     <Compile Include="Options\AppUserProfileMap.cs" />
     <Compile Include="Options\BaseMap.cs" />
     <Compile Include="Options\CustomerMap.cs" />
+    <Compile Include="Options\CustomerRequestMap.cs" />
+    <Compile Include="Options\IssueMap.cs" />
+    <Compile Include="Options\RequestIssueMap.cs" />
     <Compile Include="Options\RequestMap.cs" />
     <Compile Include="Options\SaloonMap.cs" />
     <Compile Include="Options\SaloonSponsorMap.cs" />

@@ -11,7 +11,11 @@ namespace Project.MAP.Options
     {
         public RequestMap()
         {
-            Property(x=>x.Description).HasColumnName("Açıklama");
+            
+            Property(x => x.Name).HasColumnName("İsim");
+            Property(x => x.UnitPrice).HasColumnName("Fiyat");
+            Property(x => x.DueDate).HasColumnName("Teslim Tarihi");
+            Property(x => x.Measurement).HasColumnName("Büyüklük");
         }
     }
 }
