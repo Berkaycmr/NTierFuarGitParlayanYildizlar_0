@@ -45,21 +45,14 @@
     <Compile Include="Models\AppUser.cs" />
     <Compile Include="Models\AppUserProfile.cs" />
     <Compile Include="Models\BaseEntity.cs" />
-    <Compile Include="Models\CafeRequest.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Fair.cs" />
-    <Compile Include="Models\Location.cs" />
-    <Compile Include="Models\MeetingRoom.cs" />
-    <Compile Include="Models\MeetingRoomRequest.cs" />
+    <Compile Include="Models\CustomerRequest.cs" />
+    <Compile Include="Models\Issue.cs" />
     <Compile Include="Models\Request.cs" />
-    <Compile Include="Models\Cafe.cs" />
+    <Compile Include="Models\RequestIssue.cs" />
     <Compile Include="Models\Saloon.cs" />
-    <Compile Include="Models\SaloonCustomer.cs" />
     <Compile Include="Models\SaloonSponsor.cs" />
     <Compile Include="Models\Sponsor.cs" />
-    <Compile Include="Models\Section.cs" />
-    <Compile Include="Models\Toilet.cs" />
-    <Compile Include="Models\ToiletRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -8,16 +8,18 @@ namespace Project.ENTITIES.Models
 {
     public class Request:BaseEntity
     {
-        public string Description { get; set; }
-        public int CustomerID { get; set; }
+        public string Name { get; set; }
+        public decimal UnitPrice { get; set; }
+        public DateTime DueDate { get; set; }
+        public int Measurement { get; set; }
+
 
 
         //Relational Properties
 
-        public virtual List<ToiletRequest> ToiletRequests { get; set; }
-        public virtual List<CafeRequest> CafeRequest { get; set; }
-        public virtual List<MeetingRoomRequest> MeetingRoomRequests { get; set; }
-        public virtual Customer Customer { get; set; }
+
+        public virtual List<CustomerRequest> CustomerRequests { get; set; }
+        public virtual List<RequestIssue> RequestIssues { get; set; }
 
     }
 }

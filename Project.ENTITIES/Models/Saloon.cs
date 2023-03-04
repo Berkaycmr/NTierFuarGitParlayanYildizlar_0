@@ -8,17 +8,17 @@ namespace Project.ENTITIES.Models
 {
     public class Saloon:BaseEntity
     {
-        public int Capacity { get; set; }
+        public DateTime StartingDate { get; set; }
+        public DateTime EndingDate { get; set; }
         public string Sector { get; set; }
-        public int FairID { get; set; }
-        public int LocationID { get; set; }
+        public int Capacity { get; set; }
+        public string Location { get; set; }
+        public int CustomerID { get; set; }
+
 
         //Relational Properties
-        public virtual Fair Fair { get; set; }
-        public virtual Location Location { get; set; }
         public virtual List<SaloonSponsor> SaloonSponsors { get; set; }
-        public virtual List<Section> Sections { get; set; }
-        public virtual List<SaloonCustomer> SaloonCustomers { get; set; }
+        public virtual Customer Customer { get; set; }
 
     }
 }

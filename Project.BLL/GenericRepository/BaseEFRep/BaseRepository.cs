@@ -26,7 +26,8 @@ namespace Project.BLL.GenericRepository.BaseEFRep
         }
         public void Add(T item)
         {
-            _db.SaveChanges();
+            _db.Set<T>().Add(item);
+            Save();
         }
 
         public void AddRange(List<T> list)

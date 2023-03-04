@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
-    public  class CafeRequest:BaseEntity
+    public class RequestIssue:BaseEntity
     {
-        public int CafeID { get; set; }
         public int RequestID { get; set; }
+        public int IssueID { get; set; }
 
         //Relational Properties
-        public virtual Cafe Cafe { get; set; }
         public virtual Request Request { get; set; }
+        public virtual Issue Issue { get; set; }
 
     }
 }
