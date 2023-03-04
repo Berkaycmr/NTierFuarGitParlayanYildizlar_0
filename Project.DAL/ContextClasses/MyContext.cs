@@ -29,6 +29,9 @@ namespace Project.DAL.ContextClasses
             modelBuilder.Configurations.Add(new AppUserMap());
             modelBuilder.Configurations.Add(new AppUserProfileMap());
             modelBuilder.Configurations.Add(new CustomerMap());
+            //modelBuilder.Configurations.Add(new CustomerRequestMap());
+            //modelBuilder.Configurations.Add(new IssueMap());
+            //modelBuilder.Configurations.Add(new RequestIssueMap());
             modelBuilder.Configurations.Add(new RequestMap());
             modelBuilder.Configurations.Add(new SaloonMap());
             modelBuilder.Configurations.Add(new SaloonSponsorMap());
@@ -40,7 +43,10 @@ namespace Project.DAL.ContextClasses
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<AppUserProfile> AppUserProfiles { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<CustomerRequest> CustomerRequests { get; set; }
+        public DbSet<Issue> Issues { get; set; }
         public DbSet<Request> Requests { get; set; }
+        public DbSet<RequestIssue> RequestIssues { get; set; }
         public DbSet<Saloon> Saloons { get; set; }
         public DbSet<SaloonSponsor> SaloonSponsors { get; set; }
         public DbSet<Sponsor> Sponsors { get; set; }
