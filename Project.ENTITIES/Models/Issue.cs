@@ -9,7 +9,12 @@ namespace Project.ENTITIES.Models
     public class Issue:BaseEntity
     {
         public string Description { get; set; }
-        public DateTime RecoveryTime { get; set; }
+        public int RecoveryTime { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Description}-- Onarım süresi = {RecoveryTime} gün.";
+        }
 
         //Relational Properties
 

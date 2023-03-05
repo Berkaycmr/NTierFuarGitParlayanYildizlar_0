@@ -10,8 +10,11 @@ namespace Project.ENTITIES.Models
     {
         public string Name { get; set; }
         public decimal UnitPrice { get; set; }
-        public DateTime DueDate { get; set; }
-        public int Measurement { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Name} - Fiyatı : {UnitPrice:C2}";
+        }
 
 
 

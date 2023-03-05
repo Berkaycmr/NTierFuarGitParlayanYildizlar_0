@@ -13,6 +13,10 @@ namespace Project.ENTITIES.Models
         public string Country { get; set; }
         public int AppUserID { get; set; }
 
+        public override string ToString()
+        {
+            return $"{CompanyName} - {Sector}";
+        }
 
 
         //Relational Properties
