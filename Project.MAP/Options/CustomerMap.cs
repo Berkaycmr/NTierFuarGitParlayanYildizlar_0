@@ -11,7 +11,6 @@ namespace Project.MAP.Options
     {
         public CustomerMap()
         {
-            ToTable("Müşteriler");
             Property(x => x.CompanyName).HasColumnName("Şirket Adı");
             Property(x => x.Country).HasColumnName("Ülke");
             Property(x => x.Sector).HasColumnName("Sektör");

@@ -11,7 +11,7 @@ namespace Project.MAP.Options
     {
         public AppUserMap()
         {
-            ToTable("Kullanicilar");
+            
             Property(x => x.UserName).HasColumnName("KullaniciIsmi");
             Property(x => x.Password).HasColumnName("Sifre");
 

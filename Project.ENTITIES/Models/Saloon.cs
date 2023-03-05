@@ -15,6 +15,7 @@ namespace Project.ENTITIES.Models
         public string Location { get; set; }
         public int CustomerID { get; set; }
 
+        
 
         //Relational Properties
         public virtual List<SaloonSponsor> SaloonSponsors { get; set; }

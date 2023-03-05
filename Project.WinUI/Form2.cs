@@ -23,11 +23,13 @@ namespace Project.WinUI
         RequestRep _requestRep;
         SaloonRep _saloonRep;
         SponsorRep _sponsorRep;
+        AppUser _appUser;
 
 
 
         public Form2()
         {
+            _appUser = new AppUser();
             _customerRep = new CustomerRep();
             _issueRep = new IssueRep();
             _requestRep = new RequestRep();
@@ -38,6 +40,15 @@ namespace Project.WinUI
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            /*
+             Aldığımız instance'lar zaten veritabanında var olması gereken şeyler. Veri kalabalığını önleme amaçlı burası komple düzenlenecek.
+             Teslimat süresiyle ilgili kod grubu öğrenildi. Teslimat süreleri eklenecek ve gerekli işlemler kod grubuna dahil edilecek.
+             
+             */
+
+            
+
+
             List<Request> requests= new List<Request>
             {
                 new Request{Name = "Toilet",UnitPrice = 100},
@@ -55,19 +66,63 @@ namespace Project.WinUI
             };
 
             cmbRequests.DataSource= requests;
-            //foreach (Request item in requests)
-            //{
-            //    _requestRep.Add(item);
-            //}
+
+            foreach (Request item in requests)
+            {
+                _requestRep.Add(item);
+            }
+
             lstIssues.DataSource = issues;
+
             foreach (Issue item in issues)
             {
                 _issueRep.Add(item);
             }
 
-
         }
 
-        
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AppUser user = new AppUser();
+                _appUser = user;
+                Customer cst = new Customer();
+                cst.CompanyName = txtCompanyName.Text;
+                cst.Sector = txtSector.Text;
+                cst.Country = txtCountry.Text;
+                cst.AppUser = user;
+                _customerRep.Add(cst);
+                lstCustomers.Items.Add(cst);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void btnAddSaloon_Click(object sender, EventArgs e)
+        {
+            
+                Saloon sln = new Saloon();
+                sln.StartingDate = dtmStartDate.Value;
+                sln.EndingDate= dtmEndDate.Value;
+                sln.Location = txtLocation.Text;
+                sln.Capacity = Convert.ToInt32(txtCapacity.Text);
+                sln.Sector = txtSaloonSector.Text;                
+                if (lstCustomers.SelectedIndex>-1)
+                {
+                    sln.Customer = lstCustomers.SelectedItem as Customer;
+                    _saloonRep.Add(sln);
+                    return;
+                }
+            else
+            {
+                MessageBox.Show("Lütfen bir müşteri seçiniz.");
+            }
+                
+        }
     }
 }

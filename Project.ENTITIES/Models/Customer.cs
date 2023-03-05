@@ -11,7 +11,7 @@ namespace Project.ENTITIES.Models
         public string CompanyName { get; set; }
         public string Sector { get; set; }
         public string Country { get; set; }
-        public int AppUserID { get; set; }
+        public int? AppUserID { get; set; }
 
         public override string ToString()
         {

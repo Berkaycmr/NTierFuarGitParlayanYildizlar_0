@@ -68,11 +68,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.btnAddIssue = new System.Windows.Forms.Button();
-            this.txtIssueDesc = new System.Windows.Forms.TextBox();
-            this.txtIssueRecoveryTime = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnAddSaloon = new System.Windows.Forms.Button();
             this.btnAddRequest = new System.Windows.Forms.Button();
@@ -429,47 +424,6 @@
             this.label27.TabIndex = 17;
             this.label27.Text = "Problem bilgilerini buradan görebilirsiniz.";
             // 
-            // btnAddIssue
-            // 
-            this.btnAddIssue.Location = new System.Drawing.Point(517, 652);
-            this.btnAddIssue.Name = "btnAddIssue";
-            this.btnAddIssue.Size = new System.Drawing.Size(85, 23);
-            this.btnAddIssue.TabIndex = 21;
-            this.btnAddIssue.Text = "Problem Ekle";
-            this.btnAddIssue.UseVisualStyleBackColor = true;
-            // 
-            // txtIssueDesc
-            // 
-            this.txtIssueDesc.Location = new System.Drawing.Point(517, 588);
-            this.txtIssueDesc.Name = "txtIssueDesc";
-            this.txtIssueDesc.Size = new System.Drawing.Size(100, 20);
-            this.txtIssueDesc.TabIndex = 22;
-            // 
-            // txtIssueRecoveryTime
-            // 
-            this.txtIssueRecoveryTime.Location = new System.Drawing.Point(517, 622);
-            this.txtIssueRecoveryTime.Name = "txtIssueRecoveryTime";
-            this.txtIssueRecoveryTime.Size = new System.Drawing.Size(100, 20);
-            this.txtIssueRecoveryTime.TabIndex = 23;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(517, 569);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(74, 13);
-            this.label29.TabIndex = 24;
-            this.label29.Text = "Problem Bilgisi";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(517, 606);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(108, 13);
-            this.label30.TabIndex = 24;
-            this.label30.Text = "Tahmini çözüm süresi";
-            // 
             // btnAddCustomer
             // 
             this.btnAddCustomer.Location = new System.Drawing.Point(33, 274);
@@ -478,6 +432,7 @@
             this.btnAddCustomer.TabIndex = 25;
             this.btnAddCustomer.Text = "Müşteri Ekle";
             this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // btnAddSaloon
             // 
@@ -487,6 +442,7 @@
             this.btnAddSaloon.TabIndex = 26;
             this.btnAddSaloon.Text = "Salon Ekle";
             this.btnAddSaloon.UseVisualStyleBackColor = true;
+            this.btnAddSaloon.Click += new System.EventHandler(this.btnAddSaloon_Click);
             // 
             // btnAddRequest
             // 
@@ -616,11 +572,6 @@
             this.Controls.Add(this.btnAddRequest);
             this.Controls.Add(this.btnAddSaloon);
             this.Controls.Add(this.btnAddCustomer);
-            this.Controls.Add(this.label30);
-            this.Controls.Add(this.label29);
-            this.Controls.Add(this.txtIssueRecoveryTime);
-            this.Controls.Add(this.txtIssueDesc);
-            this.Controls.Add(this.btnAddIssue);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
@@ -713,11 +664,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Button btnAddIssue;
-        private System.Windows.Forms.TextBox txtIssueDesc;
-        private System.Windows.Forms.TextBox txtIssueRecoveryTime;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Button btnAddSaloon;
         private System.Windows.Forms.Button btnAddRequest;

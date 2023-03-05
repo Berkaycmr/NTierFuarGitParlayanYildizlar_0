@@ -11,7 +11,7 @@ namespace Project.MAP.Options
     {
         public AppUserProfileMap()
         {
-            ToTable("Profiller");
+            
             Property(x => x.FirstName).HasColumnName("Isim");
             Property(x => x.LastName).HasColumnName("Soyisim");
             
