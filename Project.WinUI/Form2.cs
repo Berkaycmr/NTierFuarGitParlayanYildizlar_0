@@ -49,35 +49,35 @@ namespace Project.WinUI
             
 
 
-            List<Request> requests= new List<Request>
-            {
-                new Request{Name = "Toilet",UnitPrice = 100},
-                new Request{Name = "Restaurant",UnitPrice = 250 },
-                new Request{Name = "Cafe",UnitPrice = 200},
-                new Request{Name = "Conference Hall",UnitPrice= 350 }
-            };
+            //List<Request> requests= new List<Request>
+            //{
+            //    new Request{Name = "Toilet",UnitPrice = 100},
+            //    new Request{Name = "Restaurant",UnitPrice = 250 },
+            //    new Request{Name = "Cafe",UnitPrice = 200},
+            //    new Request{Name = "Conference Hall",UnitPrice= 350 }
+            //};
 
-            List<Issue> issues = new List<Issue>
-            {
-                new Issue{Description = "Tuvalet tıkanıklığı",RecoveryTime = 2 },
-                new Issue{Description = "Elektrik kesintisi",RecoveryTime = 1 },
-                new Issue{Description = "İnternet kesintisi",RecoveryTime = 1 },
-                new Issue{Description = "Ses arızası", RecoveryTime = 3 }
-            };
+            //List<Issue> issues = new List<Issue>
+            //{
+            //    new Issue{Description = "Tuvalet tıkanıklığı",RecoveryTime = 2 },
+            //    new Issue{Description = "Elektrik kesintisi",RecoveryTime = 1 },
+            //    new Issue{Description = "İnternet kesintisi",RecoveryTime = 1 },
+            //    new Issue{Description = "Ses arızası", RecoveryTime = 3 }
+            //};
 
-            cmbRequests.DataSource= requests;
+            //cmbRequests.DataSource= requests;
 
-            foreach (Request item in requests)
-            {
-                _requestRep.Add(item);
-            }
+            //foreach (Request item in requests)
+            //{
+            //    _requestRep.Add(item);
+            //}
 
-            lstIssues.DataSource = issues;
+            //lstIssues.DataSource = issues;
 
-            foreach (Issue item in issues)
-            {
-                _issueRep.Add(item);
-            }
+            //foreach (Issue item in issues)
+            //{
+            //    _issueRep.Add(item);
+            //}
 
         }
 

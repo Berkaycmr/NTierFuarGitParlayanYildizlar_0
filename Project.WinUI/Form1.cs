@@ -32,6 +32,18 @@ namespace Project.WinUI
              
              */
 
+            if (_appUserRep.Any(x => x.UserName == txtUsername.Text && x.Password == txtPassword.Text))
+            {
+                MessageBox.Show("Hoş geldiniz.");
+                Form2 frm2 = new Form2();
+                frm2.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı adı veya şifre yanlış.");
+                return;
+            }
+
 
             //AppUser au = new AppUser();
             //au.UserName = txtUsername.Text;
