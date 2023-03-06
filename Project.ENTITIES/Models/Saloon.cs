@@ -15,7 +15,11 @@ namespace Project.ENTITIES.Models
         public string Location { get; set; }
         public int CustomerID { get; set; }
 
-        
+        public override string ToString()
+        {
+            return $"Kapasite: {Capacity} -- Lokasyon {Location} -- Müşteri : {Customer.CompanyName}";
+        }
+
 
         //Relational Properties
         public virtual List<SaloonSponsor> SaloonSponsors { get; set; }

@@ -28,7 +28,7 @@ namespace Project.BLL.GenericRepository.IntRep
         void Remove(T item);
         void RemoveRange(List<T> list);
         void Update(T item);
-        void UpdateTange(List<T> list);
+        void UpdateRange(List<T> list);
         void Destroy(T item);
         void DestroyRange(List<T> list);
 

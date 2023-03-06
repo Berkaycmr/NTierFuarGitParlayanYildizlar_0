@@ -134,7 +134,7 @@ namespace Project.BLL.GenericRepository.BaseEFRep
             Save();
         }
 
-        public void UpdateTange(List<T> list)
+        public void UpdateRange(List<T> list)
         {
            foreach(T item in list) Update(item);
         }

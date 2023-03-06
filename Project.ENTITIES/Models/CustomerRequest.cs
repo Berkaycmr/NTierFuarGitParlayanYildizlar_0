@@ -11,6 +11,8 @@ namespace Project.ENTITIES.Models
         public int CustomerID { get; set; }
         public int RequestID { get; set; }
 
+
+
         //Relational Properties
         public virtual Customer Customer { get; set; }
         public virtual Request Request { get; set; }
