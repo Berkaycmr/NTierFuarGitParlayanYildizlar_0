@@ -82,16 +82,15 @@
             this.label37 = new System.Windows.Forms.Label();
             this.lstIssues = new System.Windows.Forms.ListBox();
             this.btnTotalPrice = new System.Windows.Forms.Button();
-            this.txtIssueName = new System.Windows.Forms.TextBox();
-            this.txtIssueDelay = new System.Windows.Forms.TextBox();
-            this.btnAddIssue = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
             this.btnCalculateDate = new System.Windows.Forms.Button();
             this.lstSaloons = new System.Windows.Forms.ListBox();
             this.label39 = new System.Windows.Forms.Label();
+            this.btnRequestIssue = new System.Windows.Forms.Button();
+            this.dtmStartDateLast = new System.Windows.Forms.DateTimePicker();
+            this.dtmEndDateLast = new System.Windows.Forms.DateTimePicker();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtCompanyName
@@ -342,7 +341,7 @@
             // label22
             // 
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label22.Location = new System.Drawing.Point(259, 335);
+            this.label22.Location = new System.Drawing.Point(267, 335);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(166, 54);
             this.label22.TabIndex = 10;
@@ -566,73 +565,26 @@
             this.btnTotalPrice.TabIndex = 33;
             this.btnTotalPrice.Text = "Toplam Ücreti Hesapla";
             this.btnTotalPrice.UseVisualStyleBackColor = true;
-            // 
-            // txtIssueName
-            // 
-            this.txtIssueName.Location = new System.Drawing.Point(514, 598);
-            this.txtIssueName.Name = "txtIssueName";
-            this.txtIssueName.Size = new System.Drawing.Size(100, 20);
-            this.txtIssueName.TabIndex = 34;
-            // 
-            // txtIssueDelay
-            // 
-            this.txtIssueDelay.Location = new System.Drawing.Point(514, 638);
-            this.txtIssueDelay.Name = "txtIssueDelay";
-            this.txtIssueDelay.Size = new System.Drawing.Size(100, 20);
-            this.txtIssueDelay.TabIndex = 34;
-            // 
-            // btnAddIssue
-            // 
-            this.btnAddIssue.Location = new System.Drawing.Point(514, 664);
-            this.btnAddIssue.Name = "btnAddIssue";
-            this.btnAddIssue.Size = new System.Drawing.Size(78, 23);
-            this.btnAddIssue.TabIndex = 35;
-            this.btnAddIssue.Text = "Problem Ekle";
-            this.btnAddIssue.UseVisualStyleBackColor = true;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(514, 579);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(98, 13);
-            this.label28.TabIndex = 36;
-            this.label28.Text = "Problem Açıklaması";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(511, 621);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(81, 13);
-            this.label29.TabIndex = 36;
-            this.label29.Text = "Gecikme Süresi";
+            this.btnTotalPrice.Click += new System.EventHandler(this.btnTotalPrice_Click);
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(822, 333);
+            this.label30.Location = new System.Drawing.Point(819, 365);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(66, 13);
             this.label30.TabIndex = 37;
             this.label30.Text = "Teslim Tarihi";
             // 
-            // label38
-            // 
-            this.label38.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label38.Location = new System.Drawing.Point(825, 349);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(221, 150);
-            this.label38.TabIndex = 38;
-            // 
             // btnCalculateDate
             // 
-            this.btnCalculateDate.Location = new System.Drawing.Point(825, 502);
+            this.btnCalculateDate.Location = new System.Drawing.Point(819, 383);
             this.btnCalculateDate.Name = "btnCalculateDate";
             this.btnCalculateDate.Size = new System.Drawing.Size(94, 36);
             this.btnCalculateDate.TabIndex = 39;
             this.btnCalculateDate.Text = "Teslim Tarihi Hesapla";
             this.btnCalculateDate.UseVisualStyleBackColor = true;
+            this.btnCalculateDate.Click += new System.EventHandler(this.btnCalculateDate_Click);
             // 
             // lstSaloons
             // 
@@ -653,22 +605,63 @@
             this.label39.TabIndex = 41;
             this.label39.Text = "Salonlar";
             // 
+            // btnRequestIssue
+            // 
+            this.btnRequestIssue.Location = new System.Drawing.Point(514, 531);
+            this.btnRequestIssue.Name = "btnRequestIssue";
+            this.btnRequestIssue.Size = new System.Drawing.Size(97, 42);
+            this.btnRequestIssue.TabIndex = 42;
+            this.btnRequestIssue.Text = "Talep Problemi Ekle";
+            this.btnRequestIssue.UseVisualStyleBackColor = true;
+            this.btnRequestIssue.Click += new System.EventHandler(this.btnRequestIssue_Click);
+            // 
+            // dtmStartDateLast
+            // 
+            this.dtmStartDateLast.Location = new System.Drawing.Point(819, 447);
+            this.dtmStartDateLast.Name = "dtmStartDateLast";
+            this.dtmStartDateLast.Size = new System.Drawing.Size(200, 20);
+            this.dtmStartDateLast.TabIndex = 43;
+            // 
+            // dtmEndDateLast
+            // 
+            this.dtmEndDateLast.Location = new System.Drawing.Point(819, 490);
+            this.dtmEndDateLast.Name = "dtmEndDateLast";
+            this.dtmEndDateLast.Size = new System.Drawing.Size(200, 20);
+            this.dtmEndDateLast.TabIndex = 43;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(819, 426);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(82, 13);
+            this.label28.TabIndex = 44;
+            this.label28.Text = "Başlangıç Tarihi";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(822, 474);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(55, 13);
+            this.label29.TabIndex = 45;
+            this.label29.Text = "Bitiş Tarihi";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1157, 732);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.dtmEndDateLast);
+            this.Controls.Add(this.dtmStartDateLast);
+            this.Controls.Add(this.btnRequestIssue);
             this.Controls.Add(this.label39);
             this.Controls.Add(this.lstSaloons);
             this.Controls.Add(this.btnCalculateDate);
-            this.Controls.Add(this.label38);
             this.Controls.Add(this.label30);
-            this.Controls.Add(this.label29);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.btnAddIssue);
-            this.Controls.Add(this.txtIssueDelay);
-            this.Controls.Add(this.txtIssueName);
             this.Controls.Add(this.btnTotalPrice);
             this.Controls.Add(this.lstIssues);
             this.Controls.Add(this.label37);
@@ -787,15 +780,14 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.ListBox lstIssues;
         private System.Windows.Forms.Button btnTotalPrice;
-        private System.Windows.Forms.TextBox txtIssueName;
-        private System.Windows.Forms.TextBox txtIssueDelay;
-        private System.Windows.Forms.Button btnAddIssue;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Button btnCalculateDate;
         private System.Windows.Forms.ListBox lstSaloons;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Button btnRequestIssue;
+        private System.Windows.Forms.DateTimePicker dtmStartDateLast;
+        private System.Windows.Forms.DateTimePicker dtmEndDateLast;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
     }
 }
